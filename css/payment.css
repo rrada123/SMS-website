@@ -1,0 +1,193 @@
+/* Base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Content Styles */
+.content {
+    margin-left: 180px; /* Adjusted to match sidebar width */
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Ensure consistent font style */
+    background-color: #f9f9f9; /* Slight background color for better readability */
+    min-height: 100vh; /* Ensure content area covers the viewport height */
+    overflow: auto; /* Ensure content is scrollable if it overflows vertically */
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Increased padding for better spacing */
+    background-color: #2c3e50;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for separation */
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 1.5rem; /* Larger font size for better visibility */
+    color: white;
+	margin-left:20px;
+}
+
+/* Logout button styling */
+.logout {
+    text-decoration: none;
+    color: #333; /* Darker text color for better contrast */
+    background-color: #e0e0e0; /* Slightly darker background */
+    padding: 8px 15px; /* Increased padding */
+    border-radius: 4px; /* Slightly rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.logout:hover {
+    background-color: #ccc; /* Slightly darker background on hover */
+    color: #000; /* Dark text color on hover */
+}
+
+/* Image section styling */
+.image-section {
+    margin-top: 20px;
+}
+
+.images-container, .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px; /* Adjust gap between images */
+
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ddd; /* Light border for image wrapper */
+    border-radius: 4px; /* Slightly rounded corners for image wrapper */
+    overflow: hidden; /* Ensure images don't overflow */
+    background-color: #fff; /* Background color for better contrast */
+}
+
+.image-wrapper img {
+    display: block;
+    width: 75%%; /* Fit the width of the wrapper */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Crop the image to fit the square aspect ratio */
+}
+
+/* Small image styling for edit mode */
+.edit-modal .image-wrapper img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.displayed-image, .gallery-image {
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-hide, .btn-unhide {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-unhide {
+    background-color: #4CAF50;
+}
+
+.btn-hide:hover, .btn-unhide:hover {
+    background-color: #d32f2f;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.modal-header .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-header .close:hover,
+
+.modal-header .close:focus {
+    color: black;
+}
+
+.modal-body {
+    padding: 20px 0;
+}
+
+.image-gallery, .hidden-images-gallery {
+    margin-top: 20px;
+}
+
+#uploadImageForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#uploadImageForm label {
+    font-weight: bold;
+}
+
+.btn-upload {
+    align-self: flex-start;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-upload:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ecf0f1; /* Light background color for the whole page */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+/* Content Styles */
+.content {
+    margin-left: 180px; /* Adjusted to account for the sidebar width */
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50; /* Darker background color for the header */
+    padding: 10px;
+    color: #ecf0f1; /* Light color for text */
+    flex-shrink: 0;
+}
+
+.header span {
+    font-size: 18px;
+}
+
+.header a.logout {
+    color: #e74c3c; /* Red color for logout button */
+    font-weight: bold;
+}
+
+/* Form Styling */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    margin: 20px auto;
+    border: 2px solid #3498db; /* Blue border for form container */
+}
+
+.form-container h2 {
+    margin-top: 0;
+    color: #2c3e50; /* Darker text color for headings */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50; /* Darker text color for labels */
+}
+
+.form-group input[type="text"], 
+.form-group input[type="email"], 
+.form-group input[type="date"], 
+.form-group select {
+    width: 100%;
+    padding: 12px; /* Increased padding for better usability */
+    border: 2px solid #3498db; /* Blue border for input fields */
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px; /* Slightly larger font size for readability */
+}
+
+.form-group input[type="text"]:focus, 
+.form-group input[type="email"]:focus, 
+.form-group input[type="date"]:focus, 
+.form-group select:focus {
+    border-color: #2980b9; /* Darker blue border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+.btn-toolbar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-toolbar .btn-save {
+    background-color: #3498db; /* Blue color for save button */
+    color: #fff;
+    padding: 12px 20px; /* Increased padding for better button size */
+    border: 2px solid #2980b9; /* Blue border for save button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-toolbar .btn-save:hover {
+    background-color: #2980b9; /* Darker blue for hover */
+    border-color: #1f5b8a; /* Even darker blue border on hover */
+}
+
+.btn-toolbar .btn-cancel {
+    background-color: #e74c3c; /* Red color for cancel button */
+    color: #fff;
+    padding: 12px 20px; /* Increased padding for better button size */
+    border: 2px solid #c0392b; /* Red border for cancel button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-toolbar .btn-cancel:hover {
+    background-color: #c0392b; /* Darker red for hover */
+    border-color: #a83229; /* Even darker red border on hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead {
+    position: sticky;
+    top: 0;
+    background-color: #ecf0f1;
+    z-index: 1;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border: 2px solid #bdc3c7; /* Slightly thicker border for table cells */
+}
+
+table th {
+    background-color: #3498db; /* Blue header background */
+    color: #fff;
+    font-weight: bold; /* Make header text bold */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #ecf0f1;
+}

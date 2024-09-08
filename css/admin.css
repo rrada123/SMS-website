@@ -1,0 +1,88 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    height: 100vh;
+    overflow: hidden; /* Prevent default overflow on body */
+}
+
+/* Content Area Styling */
+.content {
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-sizing: border-box; /* Include padding in width calculation */
+    background-color: #f5f5f5; /* Background color for content area */
+    color: #333; /* Text color for content area */
+    margin-left: 240px; /* Margin left to accommodate space for the sidebar */
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Header background color */
+    padding: 10px;
+    color: #333; /* Text color for header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for header */
+}
+
+/* Logout Link Styling */
+.header .logout {
+    color: #e74c3c; /* Color for logout */
+    text-decoration: none;
+    font-size: 18px; /* Font size for logout text */
+}
+
+.header .logout:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard Styling */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px; /* Margin from the top */
+}
+
+/* Larger Cards Styling */
+.card {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    line-height: 1;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card Colors */
+.card-1 { background-color: #e91e63; }
+.card-2 { background-color: #9c27b0; }
+.card-3 { background-color: #3f51b5; }
+.card-4 { background-color: #03a9f4; }
+.card-5 { background-color: #00bcd4; }
+.card-6 { background-color: #009688; }
+.card-7 { background-color: #4caf50; }
+.card-8 { background-color: #ff9800; }
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin-left: 0; /* Remove margin-left for small screens */
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+}

@@ -1,0 +1,16 @@
+Log-in for admin
+user: admin
+passs: admin
+
+
+Log-in for students
+user: "student ID" - so depende kung ano student id niya sa DB
+password: "Last name + DOB" - ex: Doe1997-08-28
+
+***********************************************
+
+for students portal with tab contact admin - its email process hah. so meaning it will be received by adminemail suposedly then admin na bahala mag update. 
+
+***********************************************
+
+all are functioning and working, try anay kung ano ang wala ga gana. 
